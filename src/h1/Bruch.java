@@ -11,7 +11,7 @@ public class Bruch {
 	}
     
     
-    private int ggT(int x, int y) {
+    public int ggT(int x, int y) {
     	int a = (x >= y) ? x : y;
     	int b = (x >= y) ? y : x;
     		
