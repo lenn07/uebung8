@@ -39,7 +39,7 @@ public class SimpleList {
     
     public Node findFirst(int value) {
     	Node temp = head.next;
-    	while(temp.value != value && temp != null) {
+    	while(temp != null && temp.value != value) {
     		temp = temp.next;
     	}
     	return temp;
