@@ -44,4 +44,31 @@ public class SimpleList {
     	}
     	return temp;
     }
+    
+    public boolean insertAfter(int preValue, int newValue) {
+        Node stelleNode = findFirst(preValue);
+    	if(stelleNode!=null) {
+    		Node newNode = new Node(newValue);
+    		newNode.next = stelleNode.next;
+    		stelleNode.next = newNode;
+    		return true;
+    	}
+    	return false;
+    }
+    
+    public boolean delete(int value) {
+    	if(value != Integer.MIN_VALUE) {
+    		Node stelleNode = findFirst(value);
+    		if(stelleNode!=null) {
+    			Node tempNode = head;
+    			while(tempNode.next!=stelleNode) {
+    				tempNode = tempNode.next;
+    			}
+    			tempNode.next = tempNode.next.next;
+    			return true;
+    		}
+    		return false;
+    	}
+    	return false;
+    }
 }
